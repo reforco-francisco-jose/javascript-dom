@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        #texto{
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="texto">Olá mundo</h1>
+    <button onclick="boasVindas()">mudar o texto</button>
+    <button onmouseover="mudarCorTexto()" onmouseleave="mudarCorTextoDeVolta()">mudar cor do texto</button>
+
+    
+
+    <script>
+        let tagH1 = document.querySelector("#texto");
+        
+        function boasVindas(){
+            tagH1.innerText = "Seja bem-vindo";
+        }
+
+        function mudarCorTexto(){
+            tagH1.style.color = "pink";
+        }
+
+        function mudarCorTextoDeVolta(){
+            tagH1.style.color = "rebeccapurple";
+        }
+    </script>
+</body>
+</html>

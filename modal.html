@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-300 h-screen relative">
+    <button onclick="mostrarModal()" class="bg-slate-500 text-white px-4 py-2 rounded mt-4 ml-4">mostrar modal</button>
+    
+    <div id="modal" class="w-[350px] p-4 rounded bg-white absolute top-1/2 left-1/2 -translate-x-1/2 duration-200 invisible opacity-0">
+        <h1 class="flex justify-between items-center">Modal <span class="leading-[30px] w-[30px] text-center bg-slate-500 text-white block rounded" onclick="fecharModal()">X</span></h1>
+        <p>Meu modal</p>
+    </div>
+
+    <script>
+        let divModal = document.querySelector("#modal");
+
+        function mostrarModal(){
+            divModal.classList.remove("invisible", "opacity-0");
+            divModal.classList.add("-translate-y-1/2");
+        }
+
+        function fecharModal(){
+            divModal.classList.add("invisible", "opacity-0");
+            divModal.classList.remove("-translate-y-1/2");
+        }
+    </script>
+</body>
+
+</html>
